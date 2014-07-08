@@ -841,8 +841,9 @@ div.input_area { /* box around box with code */
 }
 div.output_area pre { /* code output area */
     font-family: Consolas, sans-serif;
-    font-size: 12pt;
+    font-size: medium;
     line-height: 120%;
+    max-width: 120ex;
 }
 div.text_cell_render h1,  
 div.text_cell_render h2,  

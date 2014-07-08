@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>De Motu (numpy)</title><link>http://demotu.github.io/</link><description></description><language>en</language><lastBuildDate>Mon, 07 Jul 2014 23:18:14 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial on Python for scientific computing</title><link>http://demotu.github.io/posts/tutorial-on-python-for-scientific-computing.html</link><dc:creator>Marcos Duarte</dc:creator><description>&lt;div class="container" id="notebook-container"&gt;
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>De Motu (numpy)</title><link>http://demotu.github.io/</link><description></description><language>en</language><lastBuildDate>Tue, 08 Jul 2014 15:05:31 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Tutorial on Python for scientific computing</title><link>http://demotu.github.io/posts/tutorial-on-python-for-scientific-computing.html</link><dc:creator>Marcos Duarte</dc:creator><description>&lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;This tutorial is a short introduction to programming and a demonstration of the basic features of Python for scientific computing. To use Python for scientific computing we need the Python program itself with its main modules and specific packages for scientific computing. See &lt;a href="http://demotu.github.io/posts/how-to-install-python-for-scientific-computing.html"&gt;how to install Python for scientific computing&lt;/a&gt;.&lt;br&gt;Once you get Python and the necessary packages for scientific computing ready to work, there are different ways to run Python, the main ones are:&lt;/p&gt;
+&lt;p&gt;This tutorial is a short introduction to programming and a demonstration of the basic features of Python for scientific computing. To use Python for scientific computing we need the Python program itself with its main modules and specific packages for scientific computing. See &lt;a href="http://demotu.github.io/posts/how-to-install-python-for-scientific-computing.html"&gt;how to install Python for scientific computing&lt;/a&gt;. Once you get Python and the necessary packages for scientific computing ready to work, there are different ways to run Python, the main ones are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;open a terminal window in your computer and type &lt;code&gt;python&lt;/code&gt; or &lt;code&gt;ipython&lt;/code&gt; that the Python interpreter will start&lt;/li&gt;
 &lt;li&gt;run the IPython notebook and start working with Python in a browser&lt;/li&gt;

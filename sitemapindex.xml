@@ -5,15 +5,63 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>http://demotu.github.io/categories/anaconda.xml</loc>
+  <lastmod>2014-07-08</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://demotu.github.io/categories/installation.xml</loc>
+  <lastmod>2014-07-08</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://demotu.github.io/categories/ipython-notebook.xml</loc>
+  <lastmod>2014-07-07</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://demotu.github.io/categories/ipython.xml</loc>
+  <lastmod>2014-07-08</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://demotu.github.io/categories/matplotlib.xml</loc>
+  <lastmod>2014-07-08</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://demotu.github.io/categories/numpy.xml</loc>
+  <lastmod>2014-07-08</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://demotu.github.io/categories/pandas.xml</loc>
+  <lastmod>2014-07-08</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://demotu.github.io/categories/python.xml</loc>
+  <lastmod>2014-07-08</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://demotu.github.io/categories/scientific-computing.xml</loc>
+  <lastmod>2014-07-08</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://demotu.github.io/categories/scipy.xml</loc>
+  <lastmod>2014-07-08</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://demotu.github.io/categories/sympy.xml</loc>
+  <lastmod>2014-07-08</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://demotu.github.io/galleries/images/rss.xml</loc>
+  <lastmod>2014-07-08</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://demotu.github.io/galleries/rss.xml</loc>
-  <lastmod>2014-07-06</lastmod>
+  <lastmod>2014-07-08</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://demotu.github.io/rss.xml</loc>
-  <lastmod>2014-07-06</lastmod>
+  <lastmod>2014-07-08</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://demotu.github.io/sitemap.xml</loc>
-  <lastmod>2014-07-06</lastmod>
+  <lastmod>2014-07-08</lastmod>
  </sitemap>
 </sitemapindex>
