@@ -5,19 +5,8 @@ pre {
 	padding: 0.4em;
     margin: 0px;
     font-family: Consolas, sans-serif;
-    font-size: 14pt;
+    font-size: medium;
     border: none;
-}
-div.prompt { /* remove in/out prompt */
-    display: none;
-}
-div.CodeMirror pre { /* code font */
-    font-family: Consolas;
-    font-size: 14pt;
-}
-div.input_area { /* box around box with code */
-    border-color: rgba(0,0,0,0.10);
-    background: rbga(0,0,0,0.5);
 }
 div.cell{
     max-width:120ex;
@@ -27,9 +16,25 @@ div.text_cell {
 }
 div.text_cell_render {  
     font-family: times, Arial, Helvetica;
-    font-size: 14pt;
+    font-size: 13pt;
     line-height: 130%;
     max-width: 120ex;
+}
+div.prompt { /* remove in/out prompt */
+    display: none;
+}
+div.CodeMirror pre { /* code font */
+    font-family: Consolas, sans-serif;
+    font-size: medium;
+}
+div.input_area { /* box around box with code */
+    border-color: rgba(0,0,0,0.10);
+    background: rbga(0,0,0,0.5);
+}
+div.output_area pre { /* code output area */
+    font-family: Consolas, sans-serif;
+    font-size: medium;
+    line-height: 120%;
 }
 div.text_cell_render h1,  
 div.text_cell_render h2,  
@@ -63,10 +68,6 @@ div.rendered_html ol {
     list-style:decimal;
     margin: 1em 2em;
 }
-div.output_area pre {
-    font-size: 14px;
-    line-height: 120%;
-}
 .rendered_html p {
     text-align: left;
 }
@@ -80,16 +81,19 @@ div.output_area pre {
     text-decoration: none;
 }
 .rendered_html pre, .rendered_html code {
+    font-family: Consolas, sans-serif;
     background-color: #FFFFFF;
     color: #243B0B;
-    font-size: 15px;
+    font-size: 13pt;
 }
+/*
 .page-content > .content p {
  	margin: 0 0 0px;
 }
 h1, h2, h3, h4, .metadata p {
 	margin-left: 15px;
 }
+*/
 .highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
