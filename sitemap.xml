@@ -5,111 +5,111 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
-  <loc>http://demotu.github.io/2014/07/index.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/2014/07/index.html</loc>
   <lastmod>2014-07-06</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/2014/index.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/2014/index.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/archive.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/archive.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/categories/anaconda.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/categories/anaconda.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/categories/index.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/categories/index.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/categories/installation.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/categories/installation.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/categories/ipython-notebook.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/categories/ipython-notebook.html</loc>
   <lastmod>2014-07-07</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/categories/ipython.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/categories/ipython.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/categories/learn-python.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/categories/learn-python.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/categories/matplotlib.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/categories/matplotlib.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/categories/numpy.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/categories/numpy.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/categories/pandas.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/categories/pandas.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/categories/peaks.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/categories/peaks.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/categories/python.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/categories/python.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/categories/scientific-computing.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/categories/scientific-computing.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/categories/scipy.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/categories/scipy.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/categories/signal-detection.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/categories/signal-detection.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/categories/sympy.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/categories/sympy.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/categories/valleys.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/categories/valleys.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/galleries/images/index.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/galleries/images/index.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/galleries/index.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/galleries/index.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/index.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/index.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/listings/index.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/listings/index.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/posts/detect-peaks-in-data.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/posts/detect-peaks-in-data.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/posts/how-to-install-python-for-scientific-computing.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/posts/how-to-install-python-for-scientific-computing.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/posts/python-for-scientific-computing.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/posts/python-for-scientific-computing.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
-  <loc>http://demotu.github.io/posts/tutorial-on-python-for-scientific-computing.html</loc>
+  <loc>https://github.com/demotu/demotu.github.io/posts/tutorial-on-python-for-scientific-computing.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
 </urlset>

@@ -1,2 +1,2 @@
-Sitemap: http://demotu.github.io/sitemapindex.xml
+Sitemap: https://github.com/demotu/sitemapindex.xml
 
