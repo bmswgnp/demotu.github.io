@@ -6601,6 +6601,8 @@ pre {
     font-family: Consolas, sans-serif;
     font-size: medium;
     border: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 div.cell{
     max-width:120ex;
