@@ -21,6 +21,10 @@
   <lastmod>2014-07-08</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://demotu.github.io/categories/learn-python.xml</loc>
+  <lastmod>2014-07-08</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://demotu.github.io/categories/matplotlib.xml</loc>
   <lastmod>2014-07-08</lastmod>
  </sitemap>
