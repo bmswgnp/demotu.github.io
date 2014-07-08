@@ -1,117 +1,76 @@
-@import url('http://fonts.googleapis.com/css?family=Crimson+Text');
-@import url('http://fonts.googleapis.com/css?family=Kameron');
-@import url('http://fonts.googleapis.com/css?family=Source+Code+Pro');
-
-/* Change code font */
-.CodeMirror pre {
-    font-family: Consolas, 'Source Code Pro', monocco, monospace;
-}
-div.input_area {  
-    border-color: rgba(0,0,0,0.10);
-    background: rbga(0,0,0,0.5);
-}
-div.cell{
-  max-width:120ex;
-}
-div.text_cell {  
-    max-width: 120ex; /* instead of 100%, */
-}
-div.text_cell_render {  
-    font-family: "Crimson Text";
-    font-size: 14pt;
-    line-height: 140%; /* added for some line spacing of text. */
-}
-div.text_cell_render h1,  
-div.text_cell_render h2,  
-div.text_cell_render h3,  
-div.text_cell_render h4,  
-div.text_cell_render h5 {  
-    font-family: 'Kameron';
-    font-weight: 300;
-    color: #0B243B;
-}
-div.text_cell_render h1 {  
-    font-size: 24pt;
-    line-height: 120%;
-}
-div.text_cell_render h2 {  
-    font-size: 18pt;
-    line-height: 120%;
-}
-div.text_cell_render h3 {  
-    font-size: 14pt;
-    line-height: 120%;
-}
-.rendered_html pre,
-.rendered_html code {
-    font-size: 13pt;
-}
-.rendered_html ol {
-    list-style:decimal;
-    margin: 1em 2em;
-}
-.rendered_html h1 {
-    margin: 0;
-    padding: 0;
-}
-.rendered_html h2 {
-    margin: 0;
-    padding: 0;
-}
-.rendered_html h3 {
-    margin: 0;
-    padding: 0;
-}
-.rendered_html h4 {
-    margin: 0;
-    padding: 0;
-}
-.rendered_html h5 {
-    margin: 0;
-    padding: 0;
-}
 body {
   position: static;
 }
+
 pre {
   padding: 0.4em;
   margin: 0px;
   font-family: monospace, sans-serif;
   border: none;
 }
+
 div.prompt {
-  display: none;
+  padding: 0.6em;
+  font-size: 13px;
+  background-color: #E9E9E9;
+  margin-right: 1em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
+
+div.input_prompt {
+
+}
+
+div.output_prompt {
+  /* 5px right shift to account for margin in parent container */
+  margin: 0 5px 0 0px;
+}
+
 div.output_area pre {
-  font-size: 14px;
+  font-size: 13px;
 }
+
 div.text_cell_render {
   padding: 0px;
   color: #333333;
 }
+
 .rendered_html p {
   text-align: left;
 }
+
 .rendered_html ul {
   margin: 0 0 12px 25px;
 }
+
 .rendered_html :visited {
   text-decoration: none;
 }
+
 .rendered_html :link {
   text-decoration: none;
 }
+
 .rendered_html pre, .rendered_html code {
-  background-color: #FFFFFF;
-  color: #243B0B;
+  background-color: #DDDDDD;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.05em;
+  padding-bottom: 0.05em;
+  margin: 1em 0em;
   font-size: 14px;
 }
+
 .page-content > .content p {
   margin: 0 0 0px;
 }
-h1, h2, h3, h4, .metadata p {
+
+h1, h2, h3, .metadata p {
 margin-left: 15px;
 }
+
 .highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */

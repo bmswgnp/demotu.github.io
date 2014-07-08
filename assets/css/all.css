@@ -819,14 +819,14 @@ div.input_area {
     background: rbga(0,0,0,0.5);
 }
 div.cell{
-  max-width:125ex;
+  max-width:120ex;
 }
 div.text_cell {  
-    max-width: 125ex; /* instead of 100%, */
+    max-width: 120ex; /* instead of 100%, */
 }
 div.text_cell_render {  
     font-family: "Crimson Text";
-    font-size: 13pt;
+    font-size: 14pt;
     line-height: 140%; /* added for some line spacing of text. */
 }
 div.text_cell_render h1,  
@@ -836,19 +836,23 @@ div.text_cell_render h4,
 div.text_cell_render h5 {  
     font-family: 'Kameron';
     font-weight: 300;
+    color: #0B243B;
 }
 div.text_cell_render h1 {  
     font-size: 24pt;
+    line-height: 120%;
 }
 div.text_cell_render h2 {  
     font-size: 18pt;
+    line-height: 120%;
 }
 div.text_cell_render h3 {  
     font-size: 14pt;
+    line-height: 120%;
 }
 .rendered_html pre,
 .rendered_html code {
-    font-size: 12pt;
+    font-size: 13pt;
 }
 .rendered_html ol {
     list-style:decimal;
@@ -887,7 +891,7 @@ div.prompt {
   display: none;
 }
 div.output_area pre {
-  font-size: 13px;
+  font-size: 14px;
 }
 div.text_cell_render {
   padding: 0px;
@@ -906,12 +910,8 @@ div.text_cell_render {
   text-decoration: none;
 }
 .rendered_html pre, .rendered_html code {
-  background-color: #DDDDDD;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  padding-top: 0.05em;
-  padding-bottom: 0.05em;
-  margin: 1em 0em;
+  background-color: #FFFFFF;
+  color: #243B0B;
   font-size: 14px;
 }
 .page-content > .content p {
