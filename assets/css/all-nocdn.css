@@ -6592,117 +6592,97 @@ div.cell.text_cell.rendered{padding:0}
 .widget-radio-box{display:-webkit-box;-webkit-box-orient:vertical;-webkit-box-align:stretch;display:-moz-box;-moz-box-orient:vertical;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding-top:4px}
 .docked-widget-modal{overflow:hidden;position:relative !important;top:0 !important;left:0 !important;margin-left:0 !important}
 
-@import url('http://fonts.googleapis.com/css?family=Crimson+Text');
-@import url('http://fonts.googleapis.com/css?family=Kameron');
-@import url('http://fonts.googleapis.com/css?family=Source+Code+Pro');
-
-/* Change code font */
-.CodeMirror pre {
-    font-family: Consolas, 'Source Code Pro', monocco, monospace;
+body {
+	position: static;
 }
-div.input_area {  
+pre {
+	padding: 0.4em;
+    margin: 0px;
+    font-family: Consolas, sans-serif;
+    font-size: 14pt;
+    border: none;
+}
+div.prompt { /* remove in/out prompt */
+    display: none;
+}
+div.CodeMirror pre { /* code font */
+    font-family: Consolas;
+    font-size: 14pt;
+}
+div.input_area { /* box around box with code */
     border-color: rgba(0,0,0,0.10);
     background: rbga(0,0,0,0.5);
 }
 div.cell{
-  max-width:120ex;
+    max-width:120ex;
 }
 div.text_cell {  
-    max-width: 120ex; /* instead of 100%, */
+    max-width: 120ex;
 }
 div.text_cell_render {  
-    font-family: "Crimson Text";
+    font-family: times, Arial, Helvetica;
     font-size: 14pt;
-    line-height: 140%; /* added for some line spacing of text. */
+    line-height: 130%;
+    max-width: 120ex;
 }
 div.text_cell_render h1,  
 div.text_cell_render h2,  
 div.text_cell_render h3,  
 div.text_cell_render h4,  
 div.text_cell_render h5 {  
-    font-family: 'Kameron';
-    font-weight: 300;
+    font-family: Arial;
     color: #0B243B;
+    line-height: 120%;
 }
 div.text_cell_render h1 {  
     font-size: 24pt;
-    line-height: 120%;
 }
 div.text_cell_render h2 {  
     font-size: 18pt;
-    line-height: 120%;
 }
 div.text_cell_render h3 {  
     font-size: 16pt;
-    line-height: 120%;
 }
-.rendered_html ol {
+div.text_cell_render h3 {  
+    font-size: 14pt;
+}
+div.rendered_html h1,
+div.rendered_html h2,
+div.rendered_html h3,
+div.rendered_html h4 {
+    margin: 0;
+    padding: 0;
+}
+div.rendered_html ol {
     list-style:decimal;
     margin: 1em 2em;
 }
-.rendered_html h1 {
-    margin: 0;
-    padding: 0;
-}
-.rendered_html h2 {
-    margin: 0;
-    padding: 0;
-}
-.rendered_html h3 {
-    margin: 0;
-    padding: 0;
-}
-.rendered_html h4 {
-    margin: 0;
-    padding: 0;
-}
-.rendered_html h5 {
-    margin: 0;
-    padding: 0;
-}
-body {
-  position: static;
-}
-pre {
-  padding: 0.4em;
-  margin: 0px;
-  font-family: monospace, sans-serif;
-  font-size: 15px;
-  border: none;
-  display: block;
-}
-div.prompt {
-  display: none;
-}
 div.output_area pre {
-  font-size: 15px;
-}
-div.text_cell_render {
-  padding: 0px;
-  color: #333333;
+    font-size: 14px;
+    line-height: 120%;
 }
 .rendered_html p {
-  text-align: left;
+    text-align: left;
 }
 .rendered_html ul {
-  margin: 0 0 12px 25px;
+    margin: 0 0 12px 25px;
 }
 .rendered_html :visited {
-  text-decoration: none;
+    text-decoration: none;
 }
 .rendered_html :link {
-  text-decoration: none;
+    text-decoration: none;
 }
 .rendered_html pre, .rendered_html code {
-  background-color: #FFFFFF;
-  color: #243B0B;
-  font-size: 15px;
+    background-color: #FFFFFF;
+    color: #243B0B;
+    font-size: 15px;
 }
 .page-content > .content p {
-  margin: 0 0 0px;
+ 	margin: 0 0 0px;
 }
 h1, h2, h3, h4, .metadata p {
-margin-left: 15px;
+	margin-left: 15px;
 }
 .highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
