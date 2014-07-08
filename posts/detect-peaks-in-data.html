@@ -38,7 +38,7 @@ MathJax.Hub.Config({
     <meta name="author" content="Marcos Duarte">
             <meta name="og:title" content="Detect peaks in data">
         <meta name="og:url" content="http://demotu.github.io/posts/detect-peaks-in-data.html">
-            <meta name="og:description" content="One way to detect peaks (local maxima) or valleys (local minima) in data is to use the property that a peak (or valley) must be greater (or smaller) than its immediate neighbors. The function detectpe">
+            <meta name="og:description" content="One way to detect peaks (local maxima) or valleys (local minima) in data is to use the property that a peak (or valley) must be greater (or smaller) than its immediate neighbors. The function detect_p">
         <meta name="og:site_name" content="De Motu">
         <meta name="og:type" content="article">
 
@@ -133,10 +133,10 @@ MathJax.Hub.Config({
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>One way to detect peaks (local maxima) or valleys (local minima) in data is to use the property that a peak (or valley) must be greater (or smaller) than its immediate neighbors. The function <code>detectpeaks.py</code> (code at the end of this notebook) detects peaks (or valleys) based on this feature and other characteristics. The function signature is:</p>
+<p>One way to detect peaks (local maxima) or valleys (local minima) in data is to use the property that a peak (or valley) must be greater (or smaller) than its immediate neighbors. The function <code>detect_peaks.py</code> (code at the end of this notebook) detects peaks (or valleys) based on this feature and other characteristics. The function signature is:</p>
 <pre class="sourceCode python"><code class="sourceCode python">ind = detect_peaks(x, mph=<span class="ot">None</span>, mpd=<span class="dv">1</span>, threshold=<span class="dv">0</span>, edge=<span class="st">'rising'</span>,
                    kpsh=<span class="ot">False</span>, valley=<span class="ot">False</span>, show=<span class="ot">False</span>, ax=<span class="ot">None</span>)</code></pre>
-<p>The parameters <code>mph</code>, <code>mpd</code>, and <code>threshold</code> follow the convention of the Matlab function <code>findpeaks.m</code>.<br>Let's see how to use <code>detectpeaks.py</code>, but first let's import the necessary Python libraries and configure the environment:</p>
+<p>The parameters <code>mph</code>, <code>mpd</code>, and <code>threshold</code> follow the convention of the Matlab function <code>findpeaks.m</code>.<br>Let's see how to use <code>detect_peaks.py</code>; first let's import the necessary Python libraries and configure the environment:</p>
 <!-- TEASER_END -->
 </div>
 </div>
@@ -303,7 +303,7 @@ array([1, 6])
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The function <code>detectpeaks.py</code> is relatively fast but the parameter minimum peak distance (mpd) slows down the function if the data has several peaks (&gt;1000). Try to decrease the number of peaks by tuning the other parameters or smooth the data before calling this function with several peaks in the data. Here is an example of its performance:</p>
+<p>The function <code>detect_peaks.py</code> is relatively fast but the parameter minimum peak distance (mpd) slows down the function if the data has several peaks (&gt;1000). Try to decrease the number of peaks by tuning the other parameters or smooth the data before calling this function with several peaks in the data. Here is a test of its performance:</p>
 </div>
 </div>
 </div>

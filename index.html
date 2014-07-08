@@ -119,10 +119,10 @@ MathJax.Hub.Config({
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>One way to detect peaks (local maxima) or valleys (local minima) in data is to use the property that a peak (or valley) must be greater (or smaller) than its immediate neighbors. The function <code>detectpeaks.py</code> (code at the end of this notebook) detects peaks (or valleys) based on this feature and other characteristics. The function signature is:</p>
+<p>One way to detect peaks (local maxima) or valleys (local minima) in data is to use the property that a peak (or valley) must be greater (or smaller) than its immediate neighbors. The function <code>detect_peaks.py</code> (code at the end of this notebook) detects peaks (or valleys) based on this feature and other characteristics. The function signature is:</p>
 <pre class="sourceCode python"><code class="sourceCode python">ind = detect_peaks(x, mph=<span class="ot">None</span>, mpd=<span class="dv">1</span>, threshold=<span class="dv">0</span>, edge=<span class="st">'rising'</span>,
                    kpsh=<span class="ot">False</span>, valley=<span class="ot">False</span>, show=<span class="ot">False</span>, ax=<span class="ot">None</span>)</code></pre>
-<p>The parameters <code>mph</code>, <code>mpd</code>, and <code>threshold</code> follow the convention of the Matlab function <code>findpeaks.m</code>.<br>Let's see how to use <code>detectpeaks.py</code>, but first let's import the necessary Python libraries and configure the environment:</p>
+<p>The parameters <code>mph</code>, <code>mpd</code>, and <code>threshold</code> follow the convention of the Matlab function <code>findpeaks.m</code>.<br>Let's see how to use <code>detect_peaks.py</code>; first let's import the necessary Python libraries and configure the environment:</p>
 <p class="more"><a href="posts/detect-peaks-in-data.html">Read more…</a></p>
 </div>
 </div>
