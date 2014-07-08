@@ -49,6 +49,10 @@
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
+  <loc>http://demotu.github.io/categories/peaks.html</loc>
+  <lastmod>2014-07-08</lastmod>
+ </url>
+ <url>
   <loc>http://demotu.github.io/categories/python.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
@@ -61,7 +65,15 @@
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
+  <loc>http://demotu.github.io/categories/signal-detection.html</loc>
+  <lastmod>2014-07-08</lastmod>
+ </url>
+ <url>
   <loc>http://demotu.github.io/categories/sympy.html</loc>
+  <lastmod>2014-07-08</lastmod>
+ </url>
+ <url>
+  <loc>http://demotu.github.io/categories/valleys.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>
@@ -78,6 +90,10 @@
  </url>
  <url>
   <loc>http://demotu.github.io/listings/index.html</loc>
+  <lastmod>2014-07-08</lastmod>
+ </url>
+ <url>
+  <loc>http://demotu.github.io/posts/detect-peaks-in-data.html</loc>
   <lastmod>2014-07-08</lastmod>
  </url>
  <url>

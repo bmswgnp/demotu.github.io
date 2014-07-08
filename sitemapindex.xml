@@ -33,6 +33,10 @@
   <lastmod>2014-07-08</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://demotu.github.io/categories/peaks.xml</loc>
+  <lastmod>2014-07-08</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://demotu.github.io/categories/python.xml</loc>
   <lastmod>2014-07-08</lastmod>
  </sitemap>
@@ -45,7 +49,15 @@
   <lastmod>2014-07-08</lastmod>
  </sitemap>
  <sitemap>
+  <loc>http://demotu.github.io/categories/signal-detection.xml</loc>
+  <lastmod>2014-07-08</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>http://demotu.github.io/categories/sympy.xml</loc>
+  <lastmod>2014-07-08</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>http://demotu.github.io/categories/valleys.xml</loc>
   <lastmod>2014-07-08</lastmod>
  </sitemap>
  <sitemap>
