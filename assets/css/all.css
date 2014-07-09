@@ -897,14 +897,12 @@ div.rendered_html ol {
     color: #243B0B;
     font-size: medium;
 }
-/*
 .page-content > .content p {
  	margin: 0 0 0px;
 }
 h1, h2, h3, h4, .metadata p {
 	margin-left: 15px;
 }
-*/
 .highlight .hll { background-color: #ffffcc }
 .highlight  { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
