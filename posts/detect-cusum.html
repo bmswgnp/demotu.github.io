@@ -140,7 +140,7 @@ MathJax.Hub.Config({
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a href="http://en.wikipedia.org/wiki/Change_detection">Change detection</a> refers to procedures to identify abrupt changes in a phenomenon (Basseville and Nikiforov 1993, Gustafsson 2000). By abrupt change it is meant any difference in relation to previous known data faster than expected of some characteristic of the data such as amplitude, mean, variance, frequency, etc.</p>
-<p>The <a href="http://en.wikipedia.org/wiki/CUSUM">Cumulative sum (CUSUM)</a> algorithm is a classical technique for monitoring change detection. One form of implementing the CUSUM algorithm involves the calculation of the cumulative sum of positive and negative changes (<span class="math">\(g_t^+\)</span> and <span class="math">\(g_t^-\)</span>) in the data (<span class="math">\(x\)</span>) and comparison to a <span class="math">\(threshold\)</span>. When this threshold is exceeded a change is detected (<span class="math">\(t_{talarm}\)</span>) and the cumulative sum restarts from zero. To avoid the detection of a change in absence of an actual change or a slow drift, this algorithm also depends on a parameter <span class="math">\(drift\)</span> for drift correction. This form of the CUSUM algorithm is given by:</p>
+<p>The <a href="http://en.wikipedia.org/wiki/CUSUM">Cumulative sum (CUSUM)</a> algorithm is a classical technique for monitoring change detection. One form of implementing the CUSUM algorithm involves the calculation of the cumulative sum of positive and negative changes (<span class="math">\(g_t^+\)</span> and <span class="math">\(g_t^-\)</span>) in the data (<span class="math">\(x\)</span>) and comparison to a <span class="math">\(threshold\)</span>. When this threshold is exceeded a change is detected (<span class="math">\(t_{talarm}\)</span>) and the cumulative sum restarts from zero. To avoid the detection of a change in absence of an actual change or a slow drift, this algorithm also depends on a parameter <span class="math">\(drift\)</span> for drift correction. The CUSUM algorithm can be formulated as:</p>
 <p><span class="math">\[ \begin{array}{l l} 
 \left\{ \begin{array}{l l} 
 s[t] = x[t] - x[t-1] \\
@@ -158,7 +158,7 @@ g^-[t] = 0
 \end{array} \]</span></p>
 <!-- TEASER_END -->
 
-<p>There are different implementations of the CUSUM algorithm; for example, the term for the sum of the last elements (<span class="math">\(s[t]\)</span> above) can have a longer history (with filtering), it can be normalized by removing the data mean and then divided by the data variance), or this sum term can be squared for detecting both variance and parameter changes, etc.</p>
+<p>There are different implementations of the CUSUM algorithm; for instance, the term for the sum of the last elements (<span class="math">\(s[t]\)</span> above) can have a longer history (with filtering), it can be normalized by removing the data mean and then divided by the data variance), or this sum term can be squared for detecting both variance and parameter changes, etc.</p>
 <p>For the CUSUM algorithm to work properly, it depends on tuning the parameters <span class="math">\(h\)</span> and <span class="math">\(v\)</span> to what is meant by a change in the data. According to Gustafsson (2000), this tuning can be performed following these steps:</p>
 <ul>
 <li>Start with a very large <span class="math">\(threshold\)</span>.<br>
@@ -174,7 +174,8 @@ g^-[t] = 0
 <li>If there is a subset of the change times that does not make sense, try to increase <span class="math">\(drift\)</span>.</li>
 </ul>
 <p>The function <code>detect_cusum.py</code> (code at the end of this text) implements the CUSUM algorithm and a procedure to calculate the ending of the detected change. The function signature is:</p>
-<pre class="sourceCode python"><code class="sourceCode python">ta, tai, taf, amp = detect_cusum(x, threshold=<span class="dv">1</span>, drift=<span class="dv">0</span>, ending=<span class="ot">False</span>, show=<span class="ot">True</span>, ax=<span class="ot">None</span>)</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python">ta, tai, taf, amp = detect_cusum(x, threshold=<span class="dv">1</span>, drift=<span class="dv">0</span>, ending=<span class="ot">False</span>,
+                                 show=<span class="ot">True</span>, ax=<span class="ot">None</span>)</code></pre>
 <p>Let's see how to use <code>detect_cusum.py</code>; first let's import the necessary Python libraries and configure the environment:</p>
 </div>
 </div>
