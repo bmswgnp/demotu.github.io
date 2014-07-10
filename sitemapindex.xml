@@ -10,7 +10,7 @@
  </sitemap>
  <sitemap>
   <loc>http://demotu.github.io/categories/installation.xml</loc>
-  <lastmod>2014-07-09</lastmod>
+  <lastmod>2014-07-10</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://demotu.github.io/categories/ipython-notebook.xml</loc>
@@ -22,7 +22,7 @@
  </sitemap>
  <sitemap>
   <loc>http://demotu.github.io/categories/learn-python.xml</loc>
-  <lastmod>2014-07-09</lastmod>
+  <lastmod>2014-07-10</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://demotu.github.io/categories/matplotlib.xml</loc>
@@ -42,11 +42,11 @@
  </sitemap>
  <sitemap>
   <loc>http://demotu.github.io/categories/python.xml</loc>
-  <lastmod>2014-07-09</lastmod>
+  <lastmod>2014-07-10</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://demotu.github.io/categories/scientific-computing.xml</loc>
-  <lastmod>2014-07-09</lastmod>
+  <lastmod>2014-07-10</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://demotu.github.io/categories/scipy.xml</loc>
@@ -54,7 +54,7 @@
  </sitemap>
  <sitemap>
   <loc>http://demotu.github.io/categories/signal-detection.xml</loc>
-  <lastmod>2014-07-09</lastmod>
+  <lastmod>2014-07-10</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://demotu.github.io/categories/sympy.xml</loc>
@@ -66,18 +66,18 @@
  </sitemap>
  <sitemap>
   <loc>http://demotu.github.io/galleries/images/rss.xml</loc>
-  <lastmod>2014-07-09</lastmod>
+  <lastmod>2014-07-10</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://demotu.github.io/galleries/rss.xml</loc>
-  <lastmod>2014-07-09</lastmod>
+  <lastmod>2014-07-10</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://demotu.github.io/rss.xml</loc>
-  <lastmod>2014-07-09</lastmod>
+  <lastmod>2014-07-10</lastmod>
  </sitemap>
  <sitemap>
   <loc>http://demotu.github.io/sitemap.xml</loc>
-  <lastmod>2014-07-09</lastmod>
+  <lastmod>2014-07-10</lastmod>
  </sitemap>
 </sitemapindex>
