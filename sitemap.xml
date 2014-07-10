@@ -14,7 +14,7 @@
  </url>
  <url>
   <loc>http://demotu.github.io/archive.html</loc>
-  <lastmod>2014-07-08</lastmod>
+  <lastmod>2014-07-09</lastmod>
  </url>
  <url>
   <loc>http://demotu.github.io/categories/anaconda.html</loc>
@@ -22,11 +22,11 @@
  </url>
  <url>
   <loc>http://demotu.github.io/categories/index.html</loc>
-  <lastmod>2014-07-08</lastmod>
+  <lastmod>2014-07-09</lastmod>
  </url>
  <url>
   <loc>http://demotu.github.io/categories/installation.html</loc>
-  <lastmod>2014-07-08</lastmod>
+  <lastmod>2014-07-09</lastmod>
  </url>
  <url>
   <loc>http://demotu.github.io/categories/ipython-notebook.html</loc>
@@ -38,7 +38,7 @@
  </url>
  <url>
   <loc>http://demotu.github.io/categories/learn-python.html</loc>
-  <lastmod>2014-07-08</lastmod>
+  <lastmod>2014-07-09</lastmod>
  </url>
  <url>
   <loc>http://demotu.github.io/categories/matplotlib.html</loc>
@@ -58,11 +58,11 @@
  </url>
  <url>
   <loc>http://demotu.github.io/categories/python.html</loc>
-  <lastmod>2014-07-08</lastmod>
+  <lastmod>2014-07-09</lastmod>
  </url>
  <url>
   <loc>http://demotu.github.io/categories/scientific-computing.html</loc>
-  <lastmod>2014-07-08</lastmod>
+  <lastmod>2014-07-09</lastmod>
  </url>
  <url>
   <loc>http://demotu.github.io/categories/scipy.html</loc>
@@ -70,7 +70,7 @@
  </url>
  <url>
   <loc>http://demotu.github.io/categories/signal-detection.html</loc>
-  <lastmod>2014-07-08</lastmod>
+  <lastmod>2014-07-09</lastmod>
  </url>
  <url>
   <loc>http://demotu.github.io/categories/sympy.html</loc>
@@ -82,34 +82,38 @@
  </url>
  <url>
   <loc>http://demotu.github.io/galleries/images/index.html</loc>
-  <lastmod>2014-07-08</lastmod>
+  <lastmod>2014-07-09</lastmod>
  </url>
  <url>
   <loc>http://demotu.github.io/galleries/index.html</loc>
-  <lastmod>2014-07-08</lastmod>
+  <lastmod>2014-07-09</lastmod>
  </url>
  <url>
   <loc>http://demotu.github.io/index.html</loc>
-  <lastmod>2014-07-08</lastmod>
+  <lastmod>2014-07-09</lastmod>
  </url>
  <url>
   <loc>http://demotu.github.io/listings/index.html</loc>
-  <lastmod>2014-07-08</lastmod>
+  <lastmod>2014-07-09</lastmod>
+ </url>
+ <url>
+  <loc>http://demotu.github.io/posts/detect-onset.html</loc>
+  <lastmod>2014-07-09</lastmod>
  </url>
  <url>
   <loc>http://demotu.github.io/posts/detect-peaks-in-data.html</loc>
-  <lastmod>2014-07-08</lastmod>
+  <lastmod>2014-07-09</lastmod>
  </url>
  <url>
   <loc>http://demotu.github.io/posts/how-to-install-python-for-scientific-computing.html</loc>
-  <lastmod>2014-07-08</lastmod>
+  <lastmod>2014-07-09</lastmod>
  </url>
  <url>
   <loc>http://demotu.github.io/posts/python-for-scientific-computing.html</loc>
-  <lastmod>2014-07-08</lastmod>
+  <lastmod>2014-07-09</lastmod>
  </url>
  <url>
   <loc>http://demotu.github.io/posts/tutorial-on-python-for-scientific-computing.html</loc>
-  <lastmod>2014-07-08</lastmod>
+  <lastmod>2014-07-09</lastmod>
  </url>
 </urlset>

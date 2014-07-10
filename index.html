@@ -106,9 +106,41 @@ MathJax.Hub.Config({
 <div class="postindex">
     <article class="h-entry post-text">
     <header>
-        <h1 class="p-name entry-title"><a href="posts/detect-peaks-in-data.html" class="u-url">Detect peaks in data</a></h1>
+        <h1 class="p-name entry-title"><a href="posts/detect-onset.html" class="u-url">Detection of onset in data</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Marcos Duarte</span></p>
+            <p class="byline author vcard"><span class="byline-name fn">Marcos</span></p>
+            <p class="dateline"><a href="posts/detect-onset.html" rel="bookmark"><time class="published dt-published" datetime="2014-07-09T18:00:00-03:00" itemprop="datePublished" title="Publication date">2014-07-09</time></a></p>
+                <p class="commentline">            <a href="posts/detect-onset.html#disqus_thread" data-disqus-identifier="cache/posts/detect-onset.html">Comments</a>
+
+
+        </p>
+</div>
+    </header>
+    <div class="p-summary entry-summary">
+    
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>One of the simplest methods to automatically detect or identify the change or occurrence of a particular event in the data, for example, its beginning and ending, or simply the data onset, is based on amplitude threshold, where the signal is considered to be 'on' when it is above a certain threshold. This threshold can be proportional to the amplitude of the baseline (the part of the data that we know there is no real signal, only noise). For instance, a threshold equals to two or three times the standard deviation of the baseline is a common procedure employed in the analysis of electromyographic data. Other way to set the threshold would be as a percentage value of the maximum or peak of the data. For instance, in movement analysis it's common to define the onset period as the signal above 5% of the peak velocity of the investigated movement.</p>
+<p>The function <code>detect_onset.py</code> (code at the end of this text) implements such onset detection based on the amplitude-threshold method with a parameter to specify a minimum number of samples above threshold to detect as onset and another parameter to specify the minimum number of samples (continuous or not) below threshold that will be ignored in the detection of data greater or equal to threshold (to avoid the detection of spikes or transients in the data). The function signature is:</p>
+<pre class="sourceCode python"><code class="sourceCode python">inds = detect_onset(x, threshold=<span class="dv">0</span>, n_above=<span class="dv">1</span>, n_below=<span class="dv">0</span>, show=<span class="ot">False</span>, ax=<span class="ot">None</span>)</code></pre>
+<p>Let's see how <code>detect_onset.py</code> works; first let's import the necessary Python libraries and configure the environment:</p>
+<p class="more"><a href="posts/detect-onset.html">Read more…</a></p>
+</div>
+</div>
+</div>
+</div>
+    </div>
+    </article>
+    <article class="h-entry post-text">
+    <header>
+        <h1 class="p-name entry-title"><a href="posts/detect-peaks-in-data.html" class="u-url">Detection of peaks in data</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Marcos</span></p>
             <p class="dateline"><a href="posts/detect-peaks-in-data.html" rel="bookmark"><time class="published dt-published" datetime="2014-07-08T15:00:00-03:00" itemprop="datePublished" title="Publication date">2014-07-08</time></a></p>
                 <p class="commentline">            <a href="posts/detect-peaks-in-data.html#disqus_thread" data-disqus-identifier="cache/posts/detect-peaks-in-data.html">Comments</a>
 
@@ -140,7 +172,7 @@ MathJax.Hub.Config({
     <header>
         <h1 class="p-name entry-title"><a href="posts/tutorial-on-python-for-scientific-computing.html" class="u-url">Tutorial on Python for scientific computing</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Marcos Duarte</span></p>
+            <p class="byline author vcard"><span class="byline-name fn">Marcos</span></p>
             <p class="dateline"><a href="posts/tutorial-on-python-for-scientific-computing.html" rel="bookmark"><time class="published dt-published" datetime="2014-07-06T21:37:03-03:00" itemprop="datePublished" title="Publication date">2014-07-06</time></a></p>
                 <p class="commentline">            <a href="posts/tutorial-on-python-for-scientific-computing.html#disqus_thread" data-disqus-identifier="cache/posts/tutorial-on-python-for-scientific-computing.html">Comments</a>
 
@@ -181,7 +213,7 @@ MathJax.Hub.Config({
     <header>
         <h1 class="p-name entry-title"><a href="posts/how-to-install-python-for-scientific-computing.html" class="u-url">How to install Python for scientific computing</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Marcos Duarte</span></p>
+            <p class="byline author vcard"><span class="byline-name fn">Marcos</span></p>
             <p class="dateline"><a href="posts/how-to-install-python-for-scientific-computing.html" rel="bookmark"><time class="published dt-published" datetime="2014-07-06T21:36:09-03:00" itemprop="datePublished" title="Publication date">2014-07-06</time></a></p>
                 <p class="commentline">            <a href="posts/how-to-install-python-for-scientific-computing.html#disqus_thread" data-disqus-identifier="cache/posts/how-to-install-python-for-scientific-computing.html">Comments</a>
 
@@ -212,7 +244,7 @@ MathJax.Hub.Config({
     <header>
         <h1 class="p-name entry-title"><a href="posts/python-for-scientific-computing.html" class="u-url">Python for scientific computing</a></h1>
         <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Marcos Duarte</span></p>
+            <p class="byline author vcard"><span class="byline-name fn">Marcos</span></p>
             <p class="dateline"><a href="posts/python-for-scientific-computing.html" rel="bookmark"><time class="published dt-published" datetime="2014-07-06T21:35:00-03:00" itemprop="datePublished" title="Publication date">2014-07-06</time></a></p>
                 <p class="commentline">            <a href="posts/python-for-scientific-computing.html#disqus_thread" data-disqus-identifier="cache/posts/python-for-scientific-computing.html">Comments</a>
 
