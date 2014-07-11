@@ -121,9 +121,7 @@ s[t] = x[t] - x[t-1] \\
 g^+[t] = max\left(g^+[t-1] + s[t]-drift,\; 0\right) \\
 g^-[t] = max\left(g^-[t-1] - s[t]-drift,\; 0\right)
 \end{array} \right. \\
-\\
 \; if \;\;\; g^+[t] &gt; threshold \;\;\; or \;\;\;  g^-[t] &gt; threshold: \\
-\\
 \left\{ \begin{array}{l l} 
 t_{talarm}=t \\
 g^+[t] = 0 \\
@@ -160,7 +158,8 @@ g^-[t] = 0
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>One of the simplest methods to automatically detect or identify the change or occurrence of a particular event in the data, for example, its beginning and ending, or simply the data onset, is based on amplitude threshold, where the signal is considered to be 'on' when it is above a certain threshold. This threshold can be proportional to the amplitude of the baseline (the part of the data that we know there is no real signal, only noise). For instance, a threshold equals to two or three times the standard deviation of the baseline is a common procedure employed in the analysis of electromyographic data. Other way to set the threshold would be as a percentage value of the maximum or peak of the data. For instance, in movement analysis it's common to define the onset period as the signal above 5% of the peak velocity of the investigated movement.</p>
 <p>The function <code>detect_onset.py</code> (code at the end of this text) implements such onset detection based on the amplitude-threshold method with a parameter to specify a minimum number of samples above threshold to detect as onset and another parameter to specify the minimum number of samples (continuous or not) below threshold that will be ignored in the detection of data greater or equal to threshold (to avoid the detection of spikes or transients in the data). The function signature is:</p>
-<pre class="sourceCode python"><code class="sourceCode python">inds = detect_onset(x, threshold=<span class="dv">0</span>, n_above=<span class="dv">1</span>, n_below=<span class="dv">0</span>, show=<span class="ot">False</span>, ax=<span class="ot">None</span>)</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python">inds = detect_onset(x, threshold=<span class="dv">0</span>, n_above=<span class="dv">1</span>, n_below=<span class="dv">0</span>,
+                    show=<span class="ot">False</span>, ax=<span class="ot">None</span>)</code></pre>
 <p>Let's see how <code>detect_onset.py</code> works; first let's import the necessary Python libraries and configure the environment:</p>
 <p class="more"><a href="posts/detect-onset.html">Read more…</a></p>
 </div>

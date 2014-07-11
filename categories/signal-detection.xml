@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>De Motu (signal detection)</title><link>http://demotu.github.io/</link><description></description><language>en</language><lastBuildDate>Thu, 10 Jul 2014 02:10:51 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Detection of changes with the CUSUM algorithm</title><link>http://demotu.github.io/posts/detect-cusum.html</link><dc:creator>Marcos</dc:creator><description>&lt;div class="container" id="notebook-container"&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>De Motu (signal detection)</title><link>http://demotu.github.io/</link><description></description><language>en</language><lastBuildDate>Fri, 11 Jul 2014 17:04:59 GMT</lastBuildDate><generator>http://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Detection of changes with the CUSUM algorithm</title><link>http://demotu.github.io/posts/detect-cusum.html</link><dc:creator>Marcos</dc:creator><description>&lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
@@ -14,16 +14,14 @@ s[t] = x[t] - x[t-1] \\
 g^+[t] = max\left(g^+[t-1] + s[t]-drift,\; 0\right) \\
 g^-[t] = max\left(g^-[t-1] - s[t]-drift,\; 0\right)
 \end{array} \right. \\
-\\
 \; if \;\;\; g^+[t] &amp;gt; threshold \;\;\; or \;\;\;  g^-[t] &amp;gt; threshold: \\
-\\
 \left\{ \begin{array}{l l} 
 t_{talarm}=t \\
 g^+[t] = 0 \\
 g^-[t] = 0 
 \end{array} \right.
 \end{array} \]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://demotu.github.io/posts/detect-cusum.html"&gt;Read more…&lt;/a&gt; (7 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>python</category><category>signal detection</category><guid>http://demotu.github.io/posts/detect-cusum.html</guid><pubDate>Wed, 09 Jul 2014 21:30:00 GMT</pubDate></item><item><title>Detection of onset in data</title><link>http://demotu.github.io/posts/detect-onset.html</link><dc:creator>Marcos</dc:creator><description>&lt;div class="container" id="notebook-container"&gt;
+&lt;p&gt;&lt;a href="http://demotu.github.io/posts/detect-cusum.html"&gt;Read more…&lt;/a&gt; (6 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>python</category><category>signal detection</category><guid>http://demotu.github.io/posts/detect-cusum.html</guid><pubDate>Wed, 09 Jul 2014 21:30:00 GMT</pubDate></item><item><title>Detection of onset in data</title><link>http://demotu.github.io/posts/detect-onset.html</link><dc:creator>Marcos</dc:creator><description>&lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
 &lt;div class="prompt input_prompt"&gt;
@@ -32,7 +30,8 @@ g^-[t] = 0
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;One of the simplest methods to automatically detect or identify the change or occurrence of a particular event in the data, for example, its beginning and ending, or simply the data onset, is based on amplitude threshold, where the signal is considered to be 'on' when it is above a certain threshold. This threshold can be proportional to the amplitude of the baseline (the part of the data that we know there is no real signal, only noise). For instance, a threshold equals to two or three times the standard deviation of the baseline is a common procedure employed in the analysis of electromyographic data. Other way to set the threshold would be as a percentage value of the maximum or peak of the data. For instance, in movement analysis it's common to define the onset period as the signal above 5% of the peak velocity of the investigated movement.&lt;/p&gt;
 &lt;p&gt;The function &lt;code&gt;detect_onset.py&lt;/code&gt; (code at the end of this text) implements such onset detection based on the amplitude-threshold method with a parameter to specify a minimum number of samples above threshold to detect as onset and another parameter to specify the minimum number of samples (continuous or not) below threshold that will be ignored in the detection of data greater or equal to threshold (to avoid the detection of spikes or transients in the data). The function signature is:&lt;/p&gt;
-&lt;pre class="sourceCode python"&gt;&lt;code class="sourceCode python"&gt;inds = detect_onset(x, threshold=&lt;span class="dv"&gt;0&lt;/span&gt;, n_above=&lt;span class="dv"&gt;1&lt;/span&gt;, n_below=&lt;span class="dv"&gt;0&lt;/span&gt;, show=&lt;span class="ot"&gt;False&lt;/span&gt;, ax=&lt;span class="ot"&gt;None&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="sourceCode python"&gt;&lt;code class="sourceCode python"&gt;inds = detect_onset(x, threshold=&lt;span class="dv"&gt;0&lt;/span&gt;, n_above=&lt;span class="dv"&gt;1&lt;/span&gt;, n_below=&lt;span class="dv"&gt;0&lt;/span&gt;,
+                    show=&lt;span class="ot"&gt;False&lt;/span&gt;, ax=&lt;span class="ot"&gt;None&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Let's see how &lt;code&gt;detect_onset.py&lt;/code&gt; works; first let's import the necessary Python libraries and configure the environment:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://demotu.github.io/posts/detect-onset.html"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>python</category><category>signal detection</category><guid>http://demotu.github.io/posts/detect-onset.html</guid><pubDate>Wed, 09 Jul 2014 21:00:00 GMT</pubDate></item><item><title>Detection of peaks in data</title><link>http://demotu.github.io/posts/detect-peaks-in-data.html</link><dc:creator>Marcos</dc:creator><description>&lt;div class="container" id="notebook-container"&gt;
 

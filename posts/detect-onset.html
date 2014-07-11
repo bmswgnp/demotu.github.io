@@ -129,7 +129,8 @@ MathJax.Hub.Config({
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>One of the simplest methods to automatically detect or identify the change or occurrence of a particular event in the data, for example, its beginning and ending, or simply the data onset, is based on amplitude threshold, where the signal is considered to be 'on' when it is above a certain threshold. This threshold can be proportional to the amplitude of the baseline (the part of the data that we know there is no real signal, only noise). For instance, a threshold equals to two or three times the standard deviation of the baseline is a common procedure employed in the analysis of electromyographic data. Other way to set the threshold would be as a percentage value of the maximum or peak of the data. For instance, in movement analysis it's common to define the onset period as the signal above 5% of the peak velocity of the investigated movement.</p>
 <p>The function <code>detect_onset.py</code> (code at the end of this text) implements such onset detection based on the amplitude-threshold method with a parameter to specify a minimum number of samples above threshold to detect as onset and another parameter to specify the minimum number of samples (continuous or not) below threshold that will be ignored in the detection of data greater or equal to threshold (to avoid the detection of spikes or transients in the data). The function signature is:</p>
-<pre class="sourceCode python"><code class="sourceCode python">inds = detect_onset(x, threshold=<span class="dv">0</span>, n_above=<span class="dv">1</span>, n_below=<span class="dv">0</span>, show=<span class="ot">False</span>, ax=<span class="ot">None</span>)</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python">inds = detect_onset(x, threshold=<span class="dv">0</span>, n_above=<span class="dv">1</span>, n_below=<span class="dv">0</span>,
+                    show=<span class="ot">False</span>, ax=<span class="ot">None</span>)</code></pre>
 <p>Let's see how <code>detect_onset.py</code> works; first let's import the necessary Python libraries and configure the environment:</p>
 <!-- TEASER_END -->
 </div>
@@ -262,61 +263,6 @@ array([[ 2,  2],
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Performance">Performance<a class="anchor-link" href="detect-onset.html#Performance">¶</a>
-</h4>
-</div>
-</div>
-</div>
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Here is a test of the <code>detect_onset.py</code> performance:</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">
-In [3]:
-</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class="highlight"><pre><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10000</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">'Detection of onset (data size= </span><span class="si">%d</span><span class="s">):'</span> <span class="o">%</span><span class="k">x</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
-<span class="o">%</span><span class="k">timeit</span> <span class="n">detect_onset</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_above</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">n_below</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>
-Detection of onset (data size= 10000):
-1000 loops, best of 3: 367 µs per loop
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Function-detect_onset.py">Function <code>detect_onset.py</code><a class="anchor-link" href="detect-onset.html#Function-detect_onset.py">¶</a>
 </h2>
 </div>
@@ -331,6 +277,7 @@ In [4]:
 <div class="inner_cell">
     <div class="input_area">
 <div class="highlight"><pre><span class="o">%</span><span class="k">loadpy</span> <span class="o">./../</span><span class="n">functions</span><span class="o">/</span><span class="n">detect_onset</span><span class="o">.</span><span class="n">py</span>
+<span class="c"># https://github.com/demotu/BMC/tree/master/functions</span>
 </pre></div>
 
 </div>
