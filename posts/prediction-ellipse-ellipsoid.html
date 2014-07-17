@@ -136,8 +136,8 @@ MathJax.Hub.Config({
 <p>Where <span class="math">\(x_{n+i}\)</span> (with dimension <span class="math">\(p\)</span>) is the new observation for which we want to calculate the prediction interval; <span class="math">\(F\)</span> is the <a href="http://en.wikipedia.org/wiki/F-distribution">F-distribution</a>; <span class="math">\(\bar{x}\)</span> is the sample mean (with dimension <span class="math">\(p\)</span>), and <span class="math">\(S\)</span> is the <a href="http://en.wikipedia.org/wiki/Sample_mean_and_sample_covariance">sample covariance matrix</a> defined as:</p>
 <p><span class="math">\[ S_{j,k} = \frac{1}{n-1}\sum_{i=1}^{n}(x_{ij}-\bar{x}_j)(x_{ik}-\bar{x}_k) \]</span></p>
 <p>The function <code>ellipseoid.py</code> (code at the end of this text) calculates the prediction ellipse or ellipsoid, some related parameters, and plots the results for a given multivariate random variable. The function signature is:</p>
-<pre class="sourceCode python"><code class="sourceCode python">volume, saxes, angles, center, R = <span class="kw">def</span> ellipseoid(P, y=<span class="ot">None</span>, z=<span class="ot">None</span>, pvalue=.<span class="dv">95</span>, units=<span class="ot">None</span>,
-                                                  show=<span class="ot">True</span>, ax=<span class="ot">None</span>):</code></pre>
+<pre class="sourceCode python"><code class="sourceCode python">volume, saxes, angles, center, R = <span class="kw">def</span> ellipseoid(P, y=<span class="ot">None</span>, z=<span class="ot">None</span>, pvalue=.<span class="dv">95</span>,
+                                                  units=<span class="ot">None</span>, show=<span class="ot">True</span>, ax=<span class="ot">None</span>):</code></pre>
 <p>Before showing how to use this code, let's look a bit more at the statistical principles behind the estimation of a prediction interval.</p>
 <!-- TEASER_END -->
 </div>
@@ -376,6 +376,17 @@ area = pi*prod(axes);                                        <span class="co">% 
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Python-function-ellipseoid.py">Python function ellipseoid.py<a class="anchor-link" href="prediction-ellipse-ellipsoid.html#Python-function-ellipseoid.py">¶</a>
+</h2>
+</div>
+</div>
+</div>
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
