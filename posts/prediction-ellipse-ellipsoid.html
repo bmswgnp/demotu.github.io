@@ -338,15 +338,16 @@ Using Rayleigh distribution: -26.3%
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Using Python, let's compute the exact formula for the prediction ellipse or ellipsoid. For instance, if a 2-D array <code>data</code> (with <code>n</code> rows and p=2 columns) is a sample of a bivariate population, the area of the prediction ellipse for a probability of 95% can be calculated using the following Python code:</p>
+<p>Using Python, let's compute the exact formula for the prediction ellipse or ellipsoid. For a 2-D array <code>data</code> (with <code>n</code> rows and <code>p</code> columns) is a sample of a bivariate (<code>p=2</code>) or trivariate (<code>p=3</code>) population, the area (volume) of the prediction ellipse (ellipsoid) for a probability of 95% can be calculated using the following Python code:</p>
 <pre class="sourceCode python"><code class="sourceCode python"><span class="ch">import</span> numpy <span class="ch">as</span> np              <span class="co"># import Numpy package</span>
 <span class="ch">from</span> scipy.stats <span class="ch">import</span> f <span class="ch">as</span> F  <span class="co"># import F distribution</span>
 n, p = data.shape               <span class="co"># 2-D array dimensions</span>
 cov = np.cov(data, rowvar=<span class="dv">0</span>)    <span class="co"># covariance matrix of data</span>
 U, s, Vt = np.linalg.svd(cov)   <span class="co"># singular value decomposition of cov</span>
 axes = np.sqrt(s*F.ppf(.<span class="dv">95</span>,p,n-p)*(n<span class="dv">-1</span>)*p*(n<span class="dv">+1</span>)/n/(n-p))  <span class="co"># semi-axes</span>
-area = np.pi*np.prod(axes)                                <span class="co"># area </span></code></pre>
-<p>If the data are a trivariate sample, we can calculate the volume of the prediction ellipsoid using exactly the same code above changing only the last line: multiply the area by 4/3.</p>
+area_vol = np.pi*np.prod(axes)  <span class="co"># area, bivariate data</span>
+<span class="kw">if</span> p==<span class="dv">3</span>:
+    area_vol = <span class="dv">4</span>/<span class="dv">3</span>*area_vol     <span class="co"># volume, trivariate data</span></code></pre>
 </div>
 </div>
 </div>
@@ -355,7 +356,7 @@ area = np.pi*np.prod(axes)                                <span class="co"># are
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Matlab-equivalent">Matlab equivalent<a class="anchor-link" href="prediction-ellipse-ellipsoid.html#Matlab-equivalent">¶</a>
+<h3 id="Equivalent-code-for-Matlab-like-environments">Equivalent code for Matlab-like environments<a class="anchor-link" href="prediction-ellipse-ellipsoid.html#Equivalent-code-for-Matlab-like-environments">¶</a>
 </h3>
 </div>
 </div>
@@ -366,13 +367,15 @@ area = np.pi*np.prod(axes)                                <span class="co"># are
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The equivalent code to compute the exact formula for the 95% prediction ellipse would be:</p>
+<p>The equivalent code for Matlab-like environments to compute the exact 95% prediction ellipse or ellipsoid would be:</p>
 <pre class="sourceCode matlab"><code class="sourceCode matlab">[n, p] = size(data);               <span class="co">% 2-D array dimensions</span>
 covar = cov(data);                 <span class="co">% covariance matrix of data</span>
 [U, S, V] = svd(covar);            <span class="co">% singular value decomposition of cov</span>
 axes = sqrt(diag(S)*finv(<span class="fl">.95</span>,p,n-p)*(n-<span class="fl">1</span>)*p*(n+<span class="fl">1</span>)/n/(n-p));  <span class="co">% semi-axes</span>
-area = pi*prod(axes);                                        <span class="co">% area </span></code></pre>
-<p>If the data are a trivariate sample, we can calculate the volume of the prediction ellipsoid using exactly the same code above changing only the last line: multiply the area by 4/3.</p>
+area_vol = pi*prod(axes);          <span class="co">% area, bivariate data</span>
+if p==<span class="fl">3</span>
+    area_vol = <span class="fl">4</span>/<span class="fl">3</span>*area_vol;       <span class="co">% volume, trivariate data</span>
+end </code></pre>
 </div>
 </div>
 </div>
@@ -381,8 +384,8 @@ area = pi*prod(axes);                                        <span class="co">% 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Python-function-ellipseoid.py">Python function ellipseoid.py<a class="anchor-link" href="prediction-ellipse-ellipsoid.html#Python-function-ellipseoid.py">¶</a>
-</h2>
+<h3 id="Python-function-ellipseoid.py">Python function ellipseoid.py<a class="anchor-link" href="prediction-ellipse-ellipsoid.html#Python-function-ellipseoid.py">¶</a>
+</h3>
 </div>
 </div>
 </div>
@@ -420,8 +423,8 @@ In [4]:
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Prediction-ellipse">Prediction ellipse<a class="anchor-link" href="prediction-ellipse-ellipsoid.html#Prediction-ellipse">¶</a>
-</h3>
+<h4 id="Prediction-ellipse">Prediction ellipse<a class="anchor-link" href="prediction-ellipse-ellipsoid.html#Prediction-ellipse">¶</a>
+</h4>
 </div>
 </div>
 </div>
@@ -558,8 +561,8 @@ Rotation matrix =
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Prediction-ellipsoid">Prediction ellipsoid<a class="anchor-link" href="prediction-ellipse-ellipsoid.html#Prediction-ellipsoid">¶</a>
-</h3>
+<h4 id="Prediction-ellipsoid">Prediction ellipsoid<a class="anchor-link" href="prediction-ellipse-ellipsoid.html#Prediction-ellipsoid">¶</a>
+</h4>
 </div>
 </div>
 </div>
