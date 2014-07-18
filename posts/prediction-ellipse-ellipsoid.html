@@ -338,7 +338,7 @@ Using Rayleigh distribution: -26.3%
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Using Python, let's compute the exact formula for the prediction ellipse or ellipsoid. For a 2-D array <code>data</code> (with <code>n</code> rows and <code>p</code> columns) is a sample of a bivariate (<code>p=2</code>) or trivariate (<code>p=3</code>) population, the area (volume) of the prediction ellipse (ellipsoid) for a probability of 95% can be calculated using the following Python code:</p>
+<p>Using Python, let's compute the area of the ellpse or the volume of the ellipsoid using the exact formula for the prediction ellipse or ellipsoid. For a 2-D array <code>data</code> (with <code>n</code> rows and <code>p</code> columns), which is a sample of a bivariate (<code>p=2</code>) or trivariate (<code>p=3</code>) population, the area (volume) of the prediction ellipse (ellipsoid) for a probability of 95% can be calculated using the following Python code:</p>
 <pre class="sourceCode python"><code class="sourceCode python"><span class="ch">import</span> numpy <span class="ch">as</span> np              <span class="co"># import Numpy package</span>
 <span class="ch">from</span> scipy.stats <span class="ch">import</span> f <span class="ch">as</span> F  <span class="co"># import F distribution</span>
 n, p = data.shape               <span class="co"># 2-D array dimensions</span>
@@ -356,7 +356,7 @@ area_vol = np.pi*np.prod(axes)  <span class="co"># area, bivariate data</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Equivalent-code-for-Matlab-like-environments">Equivalent code for Matlab-like environments<a class="anchor-link" href="prediction-ellipse-ellipsoid.html#Equivalent-code-for-Matlab-like-environments">¶</a>
+<h3 id="Equivalent-code-for-a-Matlab-like-environment">Equivalent code for a Matlab-like environment<a class="anchor-link" href="prediction-ellipse-ellipsoid.html#Equivalent-code-for-a-Matlab-like-environment">¶</a>
 </h3>
 </div>
 </div>
@@ -367,7 +367,7 @@ area_vol = np.pi*np.prod(axes)  <span class="co"># area, bivariate data</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The equivalent code for Matlab-like environments to compute the exact 95% prediction ellipse or ellipsoid would be:</p>
+<p>The equivalent code for a Matlab-like environment to compute the area (volume) of the exact 95% prediction ellipse (ellipsoid) is:</p>
 <pre class="sourceCode matlab"><code class="sourceCode matlab">[n, p] = size(data);               <span class="co">% 2-D array dimensions</span>
 covar = cov(data);                 <span class="co">% covariance matrix of data</span>
 [U, S, V] = svd(covar);            <span class="co">% singular value decomposition of cov</span>
@@ -395,7 +395,7 @@ end </code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's see now how to use the function <code>ellipseoid.py</code> (code at the end of this text) to compute the prediction ellipse or ellipsoid and other variables:</p>
+<p>Let's see now how to use the function <code>ellipseoid.py</code> (code at the end of this text) to compute the prediction ellipse or ellipsoid and related variables:</p>
 </div>
 </div>
 </div>
