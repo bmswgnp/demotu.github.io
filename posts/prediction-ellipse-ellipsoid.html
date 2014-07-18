@@ -903,14 +903,14 @@ In []:
 <span class="k">def</span> <span class="nf">ellipseoid</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">pvalue</span><span class="o">=.</span><span class="mi">95</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
     <span class="sd">"""Calculates an ellipse(oid) as prediction interval for multivariate data.</span>
 
-<span class="sd">    The prediction ellipse (or ellipsoid) is a prediction interval for a sample</span>
-<span class="sd">    of a bivariate (or trivariate) random variable and is such that there is</span>
+<span class="sd">    The prediction ellipse (ellipsoid) is a prediction interval for a sample</span>
+<span class="sd">    of a bivariate (trivariate) random variable and is such that there is</span>
 <span class="sd">    pvalue*100% of probability that a new observation will be contained in the</span>
-<span class="sd">    ellipse (or ellipsoid) (Chew, 1966). [1]_.</span>
+<span class="sd">    ellipse (ellipsoid) (Chew, 1966). [1]_.</span>
 
-<span class="sd">    The semi-axes of the prediction ellipse(oid) are found by calculating the</span>
-<span class="sd">    eigenvalues of the covariance matrix of the data and adjust the size of the</span>
-<span class="sd">    semi-axes to account for the necessary prediction probability.</span>
+<span class="sd">    The semi-axes of the ellipse (ellipsoid) are found by calculating the</span>
+<span class="sd">    eigenvalues of the covariance matrix of the data and adjusting the size of</span>
+<span class="sd">    the semi-axes to account for the necessary prediction probability.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -920,9 +920,9 @@ In []:
 <span class="sd">        The shape of the 2-D array should be (n, 2) or (n, 3) where n is the</span>
 <span class="sd">        number of observations.</span>
 <span class="sd">    y : 1-D array_like, optional (default = None)</span>
-<span class="sd">        Ordinate values of the [x, y] or [x,y,z] data.</span>
+<span class="sd">        Ordinate values of the [x, y] or [x, y, z] data.</span>
 <span class="sd">    z : 1-D array_like, optional (default = None)</span>
-<span class="sd">        Ordinate values of the [x, y] or [x,y,z] data.</span>
+<span class="sd">        Ordinate values of the [x, y] or [x, y, z] data.</span>
 <span class="sd">    pvalue : float, optional (default = .95)</span>
 <span class="sd">        Desired prediction probability of the ellipse(oid).</span>
 <span class="sd">    units : str, optional (default = None)</span>
@@ -933,7 +933,7 @@ In []:
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    volume : float</span>
+<span class="sd">    area_vol : float</span>
 <span class="sd">        Area of the ellipse or volume of the ellipsoid according to the inputs.</span>
 <span class="sd">    axes : 2-D array</span>
 <span class="sd">        Lengths of the semi-axes ellipse(oid) (largest first).</span>
@@ -1000,7 +1000,7 @@ In []:
     <span class="c"># semi-axes (largest first)</span>
     <span class="n">p</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">P</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="n">saxes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">s</span> <span class="o">*</span> <span class="n">F</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="n">pvalue</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">dfd</span><span class="o">=</span><span class="n">n</span><span class="o">-</span><span class="n">p</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">p</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">p</span><span class="p">)))</span>
-    <span class="n">volume</span> <span class="o">=</span> <span class="mi">4</span><span class="o">/</span><span class="mi">3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">saxes</span><span class="p">)</span> <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="mi">3</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">saxes</span><span class="p">)</span>
+    <span class="n">area_vol</span> <span class="o">=</span> <span class="mi">4</span><span class="o">/</span><span class="mi">3</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">saxes</span><span class="p">)</span> <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="mi">3</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">saxes</span><span class="p">)</span>
     <span class="c"># rotation matrix</span>
     <span class="n">R</span> <span class="o">=</span> <span class="n">Vt</span>
     <span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
@@ -1012,12 +1012,12 @@ In []:
     <span class="n">center</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">show</span><span class="p">:</span>
-        <span class="n">_plot</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">volume</span><span class="p">,</span> <span class="n">saxes</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">pvalue</span><span class="p">,</span> <span class="n">units</span><span class="p">,</span> <span class="n">ax</span><span class="p">)</span>
+        <span class="n">_plot</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">area_vol</span><span class="p">,</span> <span class="n">saxes</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">pvalue</span><span class="p">,</span> <span class="n">units</span><span class="p">,</span> <span class="n">ax</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="n">volume</span><span class="p">,</span> <span class="n">saxes</span><span class="p">,</span> <span class="n">angles</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">R</span>
+    <span class="k">return</span> <span class="n">area_vol</span><span class="p">,</span> <span class="n">saxes</span><span class="p">,</span> <span class="n">angles</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">R</span>
 
 
-<span class="k">def</span> <span class="nf">_plot</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">volume</span><span class="p">,</span> <span class="n">saxes</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">pvalue</span><span class="p">,</span> <span class="n">units</span><span class="p">,</span> <span class="n">ax</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">_plot</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">area_vol</span><span class="p">,</span> <span class="n">saxes</span><span class="p">,</span> <span class="n">center</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">pvalue</span><span class="p">,</span> <span class="n">units</span><span class="p">,</span> <span class="n">ax</span><span class="p">):</span>
     <span class="sd">"""Plot results of the ellipseoid function, see its help."""</span>
 
     <span class="k">try</span><span class="p">:</span>
@@ -1066,10 +1066,10 @@ In []:
             <span class="k">if</span> <span class="n">units</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
                 <span class="n">units2</span> <span class="o">=</span> <span class="s">' [</span><span class="si">%s</span><span class="s">]'</span> <span class="o">%</span> <span class="n">units</span>
                 <span class="n">units</span> <span class="o">=</span> <span class="n">units</span> <span class="o">+</span> <span class="s">r'$^2$'</span>
-                <span class="n">title</span> <span class="o">=</span> <span class="n">title</span> <span class="o">+</span> <span class="s">r'</span><span class="si">%.2f</span><span class="s"> </span><span class="si">%s</span><span class="s">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">volume</span><span class="p">,</span> <span class="n">units</span><span class="p">)</span>
+                <span class="n">title</span> <span class="o">=</span> <span class="n">title</span> <span class="o">+</span> <span class="s">r'</span><span class="si">%.2f</span><span class="s"> </span><span class="si">%s</span><span class="s">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">area_vol</span><span class="p">,</span> <span class="n">units</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">units2</span> <span class="o">=</span> <span class="s">''</span>
-                <span class="n">title</span> <span class="o">=</span> <span class="n">title</span> <span class="o">+</span> <span class="s">r'</span><span class="si">%.2f</span><span class="s">'</span> <span class="o">%</span> <span class="n">volume</span>
+                <span class="n">title</span> <span class="o">=</span> <span class="n">title</span> <span class="o">+</span> <span class="s">r'</span><span class="si">%.2f</span><span class="s">'</span> <span class="o">%</span> <span class="n">area_vol</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>
             <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
@@ -1101,10 +1101,10 @@ In []:
             <span class="k">if</span> <span class="n">units</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
                 <span class="n">units2</span> <span class="o">=</span> <span class="s">' [</span><span class="si">%s</span><span class="s">]'</span> <span class="o">%</span> <span class="n">units</span>
                 <span class="n">units</span> <span class="o">=</span> <span class="n">units</span> <span class="o">+</span> <span class="s">r'$^3$'</span>
-                <span class="n">title</span> <span class="o">=</span> <span class="n">title</span> <span class="o">+</span> <span class="s">r'</span><span class="si">%.2f</span><span class="s"> </span><span class="si">%s</span><span class="s">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">volume</span><span class="p">,</span> <span class="n">units</span><span class="p">)</span>
+                <span class="n">title</span> <span class="o">=</span> <span class="n">title</span> <span class="o">+</span> <span class="s">r'</span><span class="si">%.2f</span><span class="s"> </span><span class="si">%s</span><span class="s">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">area_vol</span><span class="p">,</span> <span class="n">units</span><span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">units2</span> <span class="o">=</span> <span class="s">''</span>
-                <span class="n">title</span> <span class="o">=</span> <span class="n">title</span> <span class="o">+</span> <span class="s">r'</span><span class="si">%.2f</span><span class="s">'</span> <span class="o">%</span> <span class="n">volume</span>
+                <span class="n">title</span> <span class="o">=</span> <span class="n">title</span> <span class="o">+</span> <span class="s">r'</span><span class="si">%.2f</span><span class="s">'</span> <span class="o">%</span> <span class="n">area_vol</span>
             <span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s">'Z'</span> <span class="o">+</span> <span class="n">units2</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
 
         <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">'X'</span> <span class="o">+</span> <span class="n">units2</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
