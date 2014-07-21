@@ -339,15 +339,16 @@ Using Rayleigh distribution: -26.3%
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Using Python, let's compute the area of the ellpse or the volume of the ellipsoid using the exact formula for the prediction ellipse or ellipsoid. For a 2-D array <code>data</code> (with <code>n</code> rows and <code>p</code> columns), which is a sample of a bivariate (<code>p=2</code>) or trivariate (<code>p=3</code>) population, the area (volume) of the prediction ellipse (ellipsoid) for a probability of 95% can be calculated using the following Python code:</p>
-<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">import</span> numpy <span class="ch">as</span> np              <span class="co"># import Numpy package</span>
-<span class="ch">from</span> scipy.stats <span class="ch">import</span> f <span class="ch">as</span> F  <span class="co"># import F distribution</span>
-n, p = data.shape               <span class="co"># 2-D array dimensions</span>
-cov = np.cov(data, rowvar=<span class="dv">0</span>)    <span class="co"># covariance matrix of data</span>
-U, s, Vt = np.linalg.svd(cov)   <span class="co"># singular value decomposition of covar</span>
-axes = np.sqrt(s*F.ppf(.<span class="dv">95</span>,p,n-p)*(n<span class="dv">-1</span>)*p*(n<span class="dv">+1</span>)/n/(n-p))    <span class="co"># semi-axes</span>
-area_vol = np.pi*np.prod(axes)  <span class="co"># area, bivariate data</span>
+<pre class="sourceCode python"><code class="sourceCode python"><span class="ch">import</span> numpy <span class="ch">as</span> np                             <span class="co"># import Numpy package</span>
+<span class="ch">from</span> scipy.stats <span class="ch">import</span> f <span class="ch">as</span> F                 <span class="co"># import F distribution</span>
+n, p = np.asarray(data).shape                  <span class="co"># 2-D array dimensions</span>
+cov = np.cov(data, rowvar=<span class="dv">0</span>)                   <span class="co"># covariance matrix of data</span>
+U, s, Vt = np.linalg.svd(cov)                  <span class="co"># singular value decomposition</span>
+ppf95 = F.ppf(.<span class="dv">95</span>,p,n-p)                       <span class="co"># 95 percent point function</span>
+axes = np.sqrt(s*ppf95*(n<span class="dv">-1</span>)*p*(n<span class="dv">+1</span>)/n/(n-p))  <span class="co"># semi-axes lengths</span>
+area_vol = np.pi*np.prod(axes)                 <span class="co"># bivariate data, area</span>
 <span class="kw">if</span> p==<span class="dv">3</span>:
-    area_vol = <span class="dv">4</span>/<span class="dv">3</span>*area_vol     <span class="co"># volume, trivariate data</span></code></pre>
+    area_vol = <span class="dv">4</span>/<span class="dv">3</span>*area_vol                    <span class="co"># trivariate data, volume</span></code></pre>
 </div>
 </div>
 </div>
@@ -368,13 +369,14 @@ area_vol = np.pi*np.prod(axes)  <span class="co"># area, bivariate data</span>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The equivalent code for a Matlab-like environment to compute the area (volume) of the exact 95% prediction ellipse (ellipsoid) is:</p>
-<pre class="sourceCode matlab"><code class="sourceCode matlab">[n, p] = size(data);               <span class="co">% 2-D array dimensions</span>
-covar = cov(data);                 <span class="co">% covariance matrix of data</span>
-[U, S, V] = svd(covar);            <span class="co">% singular value decomposition of covar</span>
-axes = sqrt(diag(S)*finv(<span class="fl">.95</span>,p,n-p)*(n-<span class="fl">1</span>)*p*(n+<span class="fl">1</span>)/n/(n-p));    <span class="co">% semi-axes</span>
-area_vol = pi*prod(axes);          <span class="co">% area, bivariate data</span>
+<pre class="sourceCode matlab"><code class="sourceCode matlab">[n, p] = size(data);                               <span class="co">% 2-D array dimensions</span>
+covar = cov(data);                                 <span class="co">% covariance matrix of data</span>
+[U, S, V] = svd(covar);                            <span class="co">% singular value decomposition</span>
+ppf95 = finv(<span class="fl">.95</span>,p,n-p)                            <span class="co">% 95 percent point function</span>
+axes = sqrt(diag(S)*ppf95*(n-<span class="fl">1</span>)*p*(n+<span class="fl">1</span>)/n/(n-p));  <span class="co">% semi-axes lengths</span>
+area_vol = pi*prod(axes);                          <span class="co">% bivariate data, area</span>
 if p==<span class="fl">3</span>
-    area_vol = <span class="fl">4</span>/<span class="fl">3</span>*area_vol;       <span class="co">% volume, trivariate data</span>
+    area_vol = <span class="fl">4</span>/<span class="fl">3</span>*area_vol;                       <span class="co">% trivariate data, volume</span>
 end </code></pre>
 </div>
 </div>
