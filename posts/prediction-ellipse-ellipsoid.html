@@ -197,7 +197,7 @@ In [2]:
     <div class="input_area">
 <div class="highlight"><pre><span class="n">F</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">p</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">f</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="n">p</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">p</span><span class="o">*</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">n</span><span class="o">/</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">p</span><span class="p">))</span>  <span class="c"># F distribution</span>
 <span class="n">N</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.975</span><span class="p">)</span>                                                  <span class="c"># Normal distribution</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">]:</span>
     <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">Approximation error for n = </span><span class="si">%d</span><span class="s">'</span> <span class="o">%</span><span class="k">i</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="s">'Using Normal distribution: </span><span class="si">%.1f%%</span><span class="s">'</span> <span class="o">%</span> <span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="p">(</span><span class="n">N</span><span class="o">-</span><span class="n">F</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span><span class="o">/</span><span class="n">F</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">)))</span>
 </pre></div>
@@ -214,6 +214,9 @@ In [2]:
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
+
+Approximation error for n = 3000
+Using Normal distribution: -0.1%
 
 Approximation error for n = 1000
 Using Normal distribution: -0.2%
@@ -274,7 +277,7 @@ In [3]:
     <div class="input_area">
 <div class="highlight"><pre><span class="n">C</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">chi2</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span>  <span class="c"># Chi-square distribution</span>
 <span class="n">R</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">rayleigh</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>                    <span class="c"># Rayleigh distribution</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">]:</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">3000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">]:</span>
     <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">Approximation error for n = </span><span class="si">%d</span><span class="s">'</span> <span class="o">%</span><span class="k">i</span><span class="p">)</span> 
     <span class="k">print</span><span class="p">(</span><span class="s">'Using Chi-square distribution: </span><span class="si">%.1f%%</span><span class="s">'</span> <span class="o">%</span> <span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="p">(</span><span class="n">C</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="n">F</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span><span class="o">/</span><span class="n">F</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">)))</span>
     <span class="k">print</span><span class="p">(</span><span class="s">'Using Rayleigh distribution: </span><span class="si">%.1f%%</span><span class="s">'</span> <span class="o">%</span> <span class="p">(</span><span class="mi">100</span><span class="o">*</span><span class="p">(</span><span class="n">R</span><span class="o">-</span><span class="n">F</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span><span class="o">/</span><span class="n">F</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">)))</span>
@@ -292,6 +295,10 @@ In [3]:
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
+
+Approximation error for n = 3000
+Using Chi-square distribution: -0.1%
+Using Rayleigh distribution: -0.1%
 
 Approximation error for n = 1000
 Using Chi-square distribution: -0.2%
@@ -344,7 +351,7 @@ Using Rayleigh distribution: -26.3%
 n, p = np.asarray(data).shape                  <span class="co"># 2-D array dimensions</span>
 cov = np.cov(data, rowvar=<span class="dv">0</span>)                   <span class="co"># covariance matrix of data</span>
 U, s, Vt = np.linalg.svd(cov)                  <span class="co"># singular value decomposition</span>
-ppf95 = F.ppf(.<span class="dv">95</span>,p,n-p)                       <span class="co"># 95 percent point function</span>
+ppf95 = F.ppf(<span class="fl">0.95</span>,p,n-p)                      <span class="co"># 95 percent point function</span>
 axes = np.sqrt(s*ppf95*(n<span class="dv">-1</span>)*p*(n<span class="dv">+1</span>)/n/(n-p))  <span class="co"># semi-axes lengths</span>
 area_vol = np.pi*np.prod(axes)                 <span class="co"># bivariate data, area</span>
 <span class="kw">if</span> p==<span class="dv">3</span>:
@@ -372,7 +379,7 @@ area_vol = np.pi*np.prod(axes)                 <span class="co"># bivariate data
 <pre class="sourceCode matlab"><code class="sourceCode matlab">[n, p] = size(data);                               <span class="co">% 2-D array dimensions</span>
 covar = cov(data);                                 <span class="co">% covariance matrix of data</span>
 [U, S, V] = svd(covar);                            <span class="co">% singular value decomposition</span>
-ppf95 = finv(<span class="fl">.95</span>,p,n-p)                            <span class="co">% 95 percent point function</span>
+ppf95 = finv(<span class="fl">0.95</span>,p,n-p);                          <span class="co">% 95 percent point function</span>
 axes = sqrt(diag(S)*ppf95*(n-<span class="fl">1</span>)*p*(n+<span class="fl">1</span>)/n/(n-p));  <span class="co">% semi-axes lengths</span>
 area_vol = pi*prod(axes);                          <span class="co">% bivariate data, area</span>
 if p==<span class="fl">3</span>
