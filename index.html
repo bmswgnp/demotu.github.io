@@ -150,13 +150,13 @@ MathJax.Hub.Config({
 <blockquote>
 <p>The 95% prediction ellipse (or ellipsoid) is a prediction interval for a sample of a bivariate (or trivariate) random variable such that there is 95% of probability that a new observation will lie inside the ellipse (or ellipsoid) <a href="http://www.jstor.org/stable/2282774">(Chew, 1966)</a>.</p>
 </blockquote>
-<p>The 95% prediction interval (a p-dimensional ellipsoid) for a sample of a multivariate random variable with <span class="math">\(p\)</span> dimensions and size <span class="math">\(n\)</span> from a population with normal distribution is given by the following probabilistic bounds which holds 95% of the time (Chew, 1966):</p>
+<p>The 95% prediction interval (a p-dimensional ellipsoid or hyperellipsoid) for a sample of a multivariate random variable with <span class="math">\(p\)</span> dimensions and size <span class="math">\(n\)</span> from a population with normal distribution is given by the following probabilistic bounds which holds 95% of the time (Chew, 1966):</p>
 <p><span class="math">\[ (x_{n+1}-\bar{x})'\: S^{-1} (x_{n+1}-\bar{x}) \leq \frac{F_{(0.95,\: p,\: n-p)}(n-1)\:p\:(n+1)}{n\:(n-p)} \]</span></p>
 <p>Where <span class="math">\(x_{n+i}\)</span> (with dimension <span class="math">\(p\)</span>) is the new observation for which we want to calculate the prediction interval; <span class="math">\(F\)</span> is the <a href="http://en.wikipedia.org/wiki/F-distribution">F-distribution</a>; <span class="math">\(\bar{x}\)</span> is the sample mean (with dimension <span class="math">\(p\)</span>), and <span class="math">\(S\)</span> is the <a href="http://en.wikipedia.org/wiki/Sample_mean_and_sample_covariance">sample covariance matrix</a> defined as:</p>
 <p><span class="math">\[ S_{j,k} = \frac{1}{n-1}\sum_{i=1}^{n}(x_{ij}-\bar{x}_j)(x_{ik}-\bar{x}_k) \]</span></p>
-<p>The function <code>ellipseoid.py</code> (code at the end of this text) calculates the prediction ellipse or ellipsoid, some related parameters, and plots the results for a given multivariate random variable. The function signature is:</p>
-<pre class="sourceCode python"><code class="sourceCode python">area_vol, saxes, angles, center, R = ellipseoid(P, y=<span class="ot">None</span>, z=<span class="ot">None</span>, pvalue=.<span class="dv">95</span>,
-                                                units=<span class="ot">None</span>, show=<span class="ot">True</span>, ax=<span class="ot">None</span>)</code></pre>
+<p>The function <code>hyperellipsoid.py</code> (code at the end of this text) calculates the prediction hyperellipsoid, some related parameters, and plots the results for a given multivariate random variable. The function signature is:</p>
+<pre class="sourceCode python"><code class="sourceCode python">hypervol, saxes, angles, p0, R = hyperellipsoid(P, y=<span class="ot">None</span>, z=<span class="ot">None</span>, pvalue=.<span class="dv">95</span>,
+                                                units=<span class="ot">None</span>, show=<span class="ot">True</span>, ax=<span class="ot">None</span>):</code></pre>
 <p>Before showing how to use this code, let's look a bit more at the statistical principles behind the estimation of a prediction interval.</p>
 <p class="more"><a href="posts/prediction-ellipse-ellipsoid.html">Read more…</a></p>
 </div>
